@@ -1,0 +1,15 @@
+h1
+{
+    margin-top: 29px;
+    font-size: 50px;
+    color: darkblue;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.navbar
+{
+    justify-content: space-between;
+}
+span {
+    padding-right: 1rem;
+}

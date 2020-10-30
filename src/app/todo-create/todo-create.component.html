@@ -1,0 +1,21 @@
+<mat-form-field floatLabel = "never"> 
+    <mat-label>ID</mat-label>
+    <input matInput required #newTodoID>
+</mat-form-field>
+<mat-form-field floatLabel = "never"> 
+    <mat-label>Title</mat-label>
+    <input matInput required #newTodoTitle>
+</mat-form-field>
+<mat-form-field floatLabel = "never">
+    <mat-label>Date</mat-label>
+    <input matInput [matDatepicker]="picker" #newTodoDate>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>  
+<mat-form-field floatLabel = "never"> 
+    <mat-label>Description</mat-label>
+    <input matInput #newTodoDesc>
+</mat-form-field>
+<br>
+<button mat-raised-button color = "primary" (click) = "addTodo(newTodoID.value,newTodoTitle.value,newTodoDate.value,newTodoDesc.value);newTodoTitle.value='';newTodoDate.value='';newTodoDesc.value='';newTodoID.value=''" style="margin-left: 25%;margin-bottom: 10px;">Add</button>
+
