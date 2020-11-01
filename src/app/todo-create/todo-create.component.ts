@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { title } from 'process';
 import { TodoService } from "../todo.service";
-import {todos} from "../todo.service";
 @Component({
   selector: 'app-todo-create',
   templateUrl: './todo-create.component.html',
   styleUrls: ['./todo-create.component.css']
 })
 export class TodoCreateComponent implements OnInit {
-  todos=todos;
-  constructor(TodoService: TodoService ) { }
+  todos
+  constructor(tService: TodoService ) { }
   ngOnInit(): void {
+    this.todos=this.tService.todos;
   }
   addTodo(ID : number, title : string, Date: string , Desc: string)
   {
